@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+/* ---------- Tokens: paleta neutra que se adapta al tema del sistema ---------- */
+:root {
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --surface-2: #f8f9fa;
+  --border: #e2e5ea;
+  --text: #1b1e25;
+  --text-muted: #6a7280;
+
+  --primary: #2f3747;
+  --primary-hover: #1f2531;
+  --primary-text: #ffffff;
+  --focus: rgba(47, 55, 71, 0.28);
+
+  --ok-bg: #e5f2ea;
+  --ok-text: #25693f;
+  --warn-bg: #f7ecd9;
+  --warn-text: #8a5a14;
+  --danger-bg: #f9e6e6;
+  --danger-text: #a13a3a;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --shadow: 0 1px 2px rgba(20, 24, 33, 0.05), 0 8px 24px -8px rgba(20, 24, 33, 0.1);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  --font: 'Manrope', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.55;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101218;
+    --surface: #181b22;
+    --surface-2: #1e222a;
+    --border: #2a2f39;
+    --text: #e8eaee;
+    --text-muted: #9099a8;
+
+    --primary: #e8eaee;
+    --primary-hover: #ffffff;
+    --primary-text: #14171d;
+    --focus: rgba(232, 234, 238, 0.28);
+
+    --ok-bg: rgba(74, 170, 112, 0.16);
+    --ok-text: #7fd0a0;
+    --warn-bg: rgba(214, 160, 70, 0.16);
+    --warn-text: #e3b968;
+    --danger-bg: rgba(220, 100, 100, 0.16);
+    --danger-text: #ee9a9a;
+
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -8px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h1 { font-size: 1.25rem; }
+h2 { font-size: 1.5rem; }
+
+p { margin: 0; }
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
